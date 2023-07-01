@@ -1,7 +1,7 @@
 const user = encodeURIComponent('victor1');
 
 module.exports = {
-    local: false,
+    local: true,
     port: 4000,
 
     //MONGO////
