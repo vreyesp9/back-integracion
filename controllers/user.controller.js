@@ -100,7 +100,7 @@ const setUsuario = async (req, res) => {
 
     if (user) {
       return res
-        .status(401)
+        .status(500)
         .json({ success: false, msg: "Usuario ya esta registrado" });
     }
     console.log("valor user ");
@@ -115,9 +115,17 @@ const setUsuario = async (req, res) => {
     });
 
     await usu.save();
-
+    return res
+      .status(200)
+      .json({ success: true, msg: "Usuario Creado Exitosamente" });
     console.log("valor de usu ", usu);
-  } catch (error) {}
+  } catch (error) {
+
+      return res
+        .status(500)
+        .json({ success: false, msg: "Error, intente mas tarde" });
+    
+  }
 };
 
 const revalidarToken = async (req, resp = response) => {
