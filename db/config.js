@@ -6,7 +6,6 @@ const https = require("https");
 const fs = require("fs");
 var express = require("express");
 var app = require("../index");
-const fs = require("fs");
 var user = encodeURIComponent(config.mongoUser);
 var p = encodeURIComponent(config.mongoP);
 var mongoURL = `mongodb+srv://admin:mandarina@clusterequifax.5bbmo.mongodb.net/equifax`;
