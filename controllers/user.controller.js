@@ -92,23 +92,23 @@ const setUsuario = async (req, res) => {
   rut = rut.replace(/\./g, "");
   dv = rut[rut.length - 1];
   rut = rut.slice(0, -1);
-
+  var pass = req.pass;
   await console.log(rut, dv, password);
 
   try {
     const user = await usuarios.findOne({ rut: rut.toString() });
 
-    // if (user) {
-    //   return res
-    //     .status(401)
-    //     .json({ success: false, msg: "Usuario ya esta registrado" });
-    // }
+    if (user) {
+      return res
+        .status(401)
+        .json({ success: false, msg: "Usuario ya esta registrado" });
+    }
     console.log("valor user ");
     var usu = await new usuarios({
       rut: rut,
       dv: dv,
       nombre: req.body.nombre,
-      password: "123456",
+      password: pass,
       refToken: "123189dh198njd98ashd9",
       active: true,
       email: req.correo,
