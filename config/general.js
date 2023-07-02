@@ -2,7 +2,7 @@ const user = encodeURIComponent('victor1');
 
 module.exports = {
     local: true,
-    port: 443,
+    port: 4000,
 
     //MONGO////
     mongoUrl: 'mongodb+srv://admin:mandarina@clusterequifax.5bbmo.mongodb.net/equifax',
