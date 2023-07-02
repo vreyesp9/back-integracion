@@ -25,8 +25,8 @@ mongoose
       server = https
         .createServer(
           {
-            key: fs.readFileSync("./ssl/ruta.key"),
-            cert: fs.readFileSync("./ssl/ruta.crt"),
+            key: fs.readFileSync("../ssl/ruta.key"),
+            cert: fs.readFileSync("../ssl/ruta.crt"),
             requestCert: false,
             rejectUnauthorized: false,
           },
