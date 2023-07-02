@@ -33,8 +33,8 @@ mongoose
           },
           app
         )
-        .listen(app.get("PORT"), () => {
-          console.log(`Servidor Node está corriendo en el puerto xxxx SSL`);
+        .listen(port, () => {
+          console.log(`Servidor Node está corriendo en el puerto xxxx SSL`+port);
         });
     }
   })
