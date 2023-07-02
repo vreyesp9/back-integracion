@@ -12,6 +12,7 @@ var mongoURL = `mongodb+srv://admin:mandarina@clusterequifax.5bbmo.mongodb.net/e
 const options = {
   useUnifiedTopology: true,
 };
+var server ;
 mongoose.Promise = global.Promise;
 mongoose
   .connect(mongoURL, { useNewUrlParser: true })
